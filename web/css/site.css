@@ -1,0 +1,116 @@
+html,
+body {
+    height: 100%;
+}
+
+.wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -60px;
+    padding: 0 0 60px;
+}
+
+.wrap > .container {
+    padding: 70px 15px 20px;
+}
+
+.footer {
+    height: 60px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+
+a.asc:after, a.desc:after {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    padding-left: 5px;
+}
+
+a.asc:after {
+    content: /*"\e113"*/ "\e151";
+}
+
+a.desc:after {
+    content: /*"\e114"*/ "\e152";
+}
+
+.sort-numerical a.asc:after {
+    content: "\e153";
+}
+
+.sort-numerical a.desc:after {
+    content: "\e154";
+}
+
+.sort-ordinal a.asc:after {
+    content: "\e155";
+}
+
+.sort-ordinal a.desc:after {
+    content: "\e156";
+}
+
+.top-buffer-l {
+    margin-top:50px;
+}
+
+.top-buffer-s {
+    margin-top:25px;
+}
+
+.stat-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 25px 50px;
+}
+
+.stat-box {
+    padding: 5px;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.stat-value {
+    display: block;
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer-item {
+    width: 50%;
+    text-align: center;
+}
+
+.footer-item:first-child {
+    text-align: left;
+}
+
+.footer-item:last-child {
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-item, .footer-item:first-child, .footer-item:last-child {
+        width: auto;
+        text-align: center;
+    }
+}
